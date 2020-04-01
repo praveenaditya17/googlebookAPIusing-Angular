@@ -1,0 +1,21 @@
+<form [formGroup]="book" (ngSubmit)="sendData()" >
+    Enter the isbn no.
+    <br>
+    <input type="text" formControlName="isbnNo" >
+    <br>
+    <input type="submit" value="submit">
+</form>
+
+<div>
+
+        <!-- <span>{{array.items[0]}}</span> -->
+        <span>{{array.items[0].volumeInfo.title}}</span><br>
+        <span>{{array.items[0].volumeInfo.authors[0]}}</span><br>
+        <span>{{array.items[0].volumeInfo.description}}</span><br>
+        <span>{{array.items[0].volumeInfo.publisher}}</span><br>
+        <span>{{array.items[0].volumeInfo.publishedDate}}</span><br>
+        <!-- <h3>{{array.items[0].volumeInfo.categories[0]}}</h3> -->
+        <span>{{array.items[0].volumeInfo.contentVersion}}</span><br>
+        <img src="{{array.items[0].volumeInfo.imageLinks.smallThumbnail}}">
+
+</div>
